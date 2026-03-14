@@ -27,7 +27,7 @@ generate_data_task → load_data_task → data_preprocessing_task → build_save
 5. **load_model_task** - Loads the saved model and prints a full cluster analysis dashboard including per-cluster market regime profile
 
 ## DAG Graph
-![DAG Graph](DAG graph.png)
+![DAG Graph](DAG%20graph.png)
 
 ## Cluster Dashboard Output
 ![Cluster Dashboard](load_model_task_logs.png)
