@@ -1,0 +1,28 @@
+[2026-03-14T15:54:23.944+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-14T15:54:23.967+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab1_Stock_Clustering.build_save_model_task manual__2026-03-14T15:54:10.952327+00:00 [queued]>
+[2026-03-14T15:54:23.982+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab1_Stock_Clustering.build_save_model_task manual__2026-03-14T15:54:10.952327+00:00 [queued]>
+[2026-03-14T15:54:23.983+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-14T15:54:24.014+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): build_save_model_task> on 2026-03-14 15:54:10.952327+00:00
+[2026-03-14T15:54:24.033+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=229) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-14T15:54:24.036+0000] {standard_task_runner.py:63} INFO - Started process 239 to run task
+[2026-03-14T15:54:24.036+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab1_Stock_Clustering', 'build_save_model_task', 'manual__2026-03-14T15:54:10.952327+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/***.py', '--cfg-path', '/tmp/tmpvgyr0o6o']
+[2026-03-14T15:54:24.041+0000] {standard_task_runner.py:91} INFO - Job 14: Subtask build_save_model_task
+[2026-03-14T15:54:24.135+0000] {task_command.py:426} INFO - Running <TaskInstance: Airflow_Lab1_Stock_Clustering.build_save_model_task manual__2026-03-14T15:54:10.952327+00:00 [running]> on host 2aa9567fd8d6
+[2026-03-14T15:54:24.292+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='student' AIRFLOW_CTX_DAG_ID='Airflow_Lab1_Stock_Clustering' AIRFLOW_CTX_TASK_ID='build_save_model_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-14T15:54:10.952327+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-14T15:54:10.952327+00:00'
+[2026-03-14T15:54:24.293+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-14T15:54:24.462+0000] {logging_mixin.py:188} INFO -   k=2  SSE=651.28  Silhouette=0.4827
+[2026-03-14T15:54:24.473+0000] {logging_mixin.py:188} INFO -   k=3  SSE=402.61  Silhouette=0.4855
+[2026-03-14T15:54:24.483+0000] {logging_mixin.py:188} INFO -   k=4  SSE=317.37  Silhouette=0.4127
+[2026-03-14T15:54:24.495+0000] {logging_mixin.py:188} INFO -   k=5  SSE=249.64  Silhouette=0.3557
+[2026-03-14T15:54:24.505+0000] {logging_mixin.py:188} INFO -   k=6  SSE=198.55  Silhouette=0.3720
+[2026-03-14T15:54:24.521+0000] {logging_mixin.py:188} INFO -   k=7  SSE=163.65  Silhouette=0.4123
+[2026-03-14T15:54:24.538+0000] {logging_mixin.py:188} INFO -   k=8  SSE=135.88  Silhouette=0.4171
+[2026-03-14T15:54:24.545+0000] {logging_mixin.py:188} INFO - [build_save_model] Best k=3 (silhouette=0.4855) → saved to /opt/***/dags/src/../model/stock_model.sav
+[2026-03-14T15:54:24.545+0000] {python.py:237} INFO - Done. Returned value was: b"\x80\x04\x95\xcc\x00\x00\x00\x00\x00\x00\x00}\x94(\x8c\x06best_k\x94K\x03\x8c\nsil_scores\x94}\x94(K\x02G?\xde\xe4\x14\xe7\xee\x91CK\x03G?\xdf\x13\x16]9\x96\xfbK\x04G?\xdah\xe8 \xe6)\x95K\x05G?\xd6\xc4u\xe66*^K\x06G?\xd7\xce\xbb\xbaU\xd1\xc4K\x07G?\xdac\x9d^J82K\x08G?\xda\xb1\x9es\x1d.\x0eu\x8c\nsse_values\x94}\x94(K\x02G@\x84Z6\xe2\xeb\x1cCK\x03G@y)\xbc\xd3Z\x85\x88K\x04G@s\xd5\xf0\xd8D\xd0\x14K\x05G@o4\x9cw\x9akQK\x06G@h\xd1\xa1\xca\xc0\x83\x12K\x07G@dt\xb5\x0b\x0f'\xbbK\x08G@`\xfc-\x0eV\x04\x19uu."
+[2026-03-14T15:54:24.546+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-14T15:54:24.578+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab1_Stock_Clustering, task_id=build_save_model_task, run_id=manual__2026-03-14T15:54:10.952327+00:00, execution_date=20260314T155410, start_date=20260314T155423, end_date=20260314T155424
+[2026-03-14T15:54:24.615+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-14T15:54:24.639+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-14T15:54:24.644+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
